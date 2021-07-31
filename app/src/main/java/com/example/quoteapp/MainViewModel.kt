@@ -1,11 +1,14 @@
 package com.example.quoteapp
 
 import android.content.Context
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.google.gson.Gson
 import java.nio.channels.AsynchronousFileChannel.open
 
 class MainViewModel(val context: Context) : ViewModel() {
+    private val TAG = "MainViewModel"
+
     private var quoteList: Array<Quote> = emptyArray()
     private var quoteSize : Int =0
     private var index = 0
@@ -13,6 +16,7 @@ class MainViewModel(val context: Context) : ViewModel() {
     init {
         quoteList = loadQuoteFromAssets()
         quoteSize = quoteList.size
+        Log.d(TAG, "size of array : $quoteSize ")
 
     }
 
@@ -29,12 +33,27 @@ class MainViewModel(val context: Context) : ViewModel() {
 
     fun getQuote() = quoteList[index]
 
-    fun nextQuote() = quoteList[++index ]
+    fun nextQuote() : Quote {
+        ++index
+       if (index == quoteSize) {
+           index = 0
+       }
 
-    fun previousQuote() = quoteList[--index]
+        return quoteList[index]
+
+    }
+
+    fun previousQuote(): Quote {
+        --index
+        if (index == -1) {
+            index = quoteSize - 1
+        }
+
+        return quoteList[index]
+    }
 
     fun randomQuote():Quote {
-        return quoteList[(0..quoteList.size).random()]
+        return quoteList[(0 until quoteSize).random()]
     }
 
 
