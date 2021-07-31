@@ -20,7 +20,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mainViewModel = ViewModelProvider(this, MainViewModelFactory(application)).get(MainViewModel::class.java)
+        mainViewModel = ViewModelProvider(this, MainViewModelFactory(application))
+                        .get(MainViewModel::class.java)
         setQuote(mainViewModel.getQuote())
 
     }
@@ -38,11 +39,17 @@ class MainActivity : AppCompatActivity() {
         setQuote(mainViewModel.nextQuote())
     }
 
+    
+
     fun onShare(view: View) {
         val intent = Intent(Intent.ACTION_SEND)
-        intent.setType("text/plain")
+        intent.type = "text/plain"
         intent.putExtra(Intent.EXTRA_TEXT, mainViewModel.getQuote().text)
         startActivity(intent)
+    }
+
+    fun onRandom(view: View) {
+        setQuote(mainViewModel.randomQuote())
     }
 
 }
