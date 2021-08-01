@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
                         .get(MainViewModel::class.java)
         setQuote(mainViewModel.getQuote())
 
+
     }
 
     private fun setQuote(quote:Quote){
@@ -50,6 +51,11 @@ class MainActivity : AppCompatActivity() {
 
     fun onRandom(view: View) {
         setQuote(mainViewModel.randomQuote())
+    }
+
+    fun showInRecyclerView(view: View) {
+        val intent = Intent(this,ListActivity::class.java)
+        startActivity(intent)
     }
 
 }

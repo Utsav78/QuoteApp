@@ -11,6 +11,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -22,6 +23,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Show in RV"
+        android:textAlignment="center"
+        android:onClick="showInRecyclerView"
+        android:textColor="#FFF"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -74,6 +89,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -83,33 +99,33 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:drawableStart="@drawable/ic_left_arrow"
-            android:drawableTint="#80FFFFFF"
             android:text="PREVIOUS"
             android:onClick="onPrevious"
             android:textColor="#80FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            app:drawableTint="#80FFFFFF" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:drawableTint="#80FFFFFF"
             android:text="RANDOM"
             android:onClick="onRandom"
             android:textColor="#80FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            app:drawableTint="#80FFFFFF" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:drawableEnd="@drawable/ic_arrow"
-            android:drawableTint="#80FFFFFF"
             android:text="NEXT"
             android:onClick="onNext"
             android:textAlignment="textEnd"
             android:textColor="#80FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            app:drawableTint="#80FFFFFF"
+            app:drawableEndCompat="@drawable/ic_arrow" />
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -117,14 +133,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        android:layout_marginRight="24dp"
+        android:layout_marginEnd="24dp"
         app:backgroundTint="#454545"
         android:onClick="onShare"
         android:foregroundTint="#FFF"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:srcCompat="@drawable/ic_share" />
+        app:srcCompat="@drawable/ic_share"
+        android:focusable="true" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

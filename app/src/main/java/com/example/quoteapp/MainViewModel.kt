@@ -9,7 +9,7 @@ import java.nio.channels.AsynchronousFileChannel.open
 class MainViewModel(val context: Context) : ViewModel() {
     private val TAG = "MainViewModel"
 
-    private var quoteList: Array<Quote> = emptyArray()
+    var quoteList: Array<Quote> = emptyArray()
     private var quoteSize : Int =0
     private var index = 0
 
