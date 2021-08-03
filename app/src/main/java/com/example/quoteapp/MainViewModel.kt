@@ -4,10 +4,13 @@ import android.content.Context
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.google.gson.Gson
-import java.nio.channels.AsynchronousFileChannel.open
 
 class MainViewModel(val context: Context) : ViewModel() {
-    private val TAG = "MainViewModel"
+
+    companion object{
+        private const val TAG = "MainViewModel"
+
+    }
 
     var quoteList: Array<Quote> = emptyArray()
     private var quoteSize : Int =0

@@ -10,9 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuoteApp">
         <activity
+            android:name=".DashBoardActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".TestActivity"
+            android:exported="true" />
+        <activity
             android:name=".ListActivity"
             android:exported="true" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
