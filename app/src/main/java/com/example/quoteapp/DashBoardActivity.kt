@@ -13,8 +13,19 @@ class DashBoardActivity : AppCompatActivity() {
 
     fun onShuffle(view: View) {
 
-        startActivity(Intent(this,ListActivity::class.java))
+        Intent(this,ListActivity::class.java).apply {
+            putExtra("name","quotes.json")
+            startActivity(this)
+        }
 
+    }
+
+    fun onHope(view: View) {
+
+        Intent(this,ListActivity::class.java).apply {
+            putExtra("name","hope.json")
+            startActivity(this)
+        }
 
     }
 }

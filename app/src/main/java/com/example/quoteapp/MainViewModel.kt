@@ -5,12 +5,8 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.google.gson.Gson
 
-class MainViewModel(val context: Context) : ViewModel() {
+class MainViewModel(val context: Context,val name : String) : ViewModel() {
 
-    companion object{
-        private const val TAG = "MainViewModel"
-
-    }
 
     var quoteList: Array<Quote> = emptyArray()
     private var quoteSize : Int =0
@@ -19,12 +15,11 @@ class MainViewModel(val context: Context) : ViewModel() {
     init {
         quoteList = loadQuoteFromAssets()
         quoteSize = quoteList.size
-        Log.d(TAG, "size of array : $quoteSize ")
 
     }
 
     private fun loadQuoteFromAssets(): Array<Quote> {
-        val inputStream = context.assets.open("quotes.json")
+        val inputStream = context.assets.open(name)
         val size : Int = inputStream.available()
         val buffer = ByteArray(size)
         inputStream.read(buffer)

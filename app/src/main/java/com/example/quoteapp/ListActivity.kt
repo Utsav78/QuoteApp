@@ -13,6 +13,7 @@ class ListActivity : AppCompatActivity() , QuotesAdapter.OnItemClickListener {
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: QuotesAdapter
     private lateinit var viewModel: MainViewModel
+    private lateinit var name : String
     companion object {
         private const val TAG = "ListActivity"
     }
@@ -21,7 +22,9 @@ class ListActivity : AppCompatActivity() , QuotesAdapter.OnItemClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
 
-        viewModel = ViewModelProvider(this, MainViewModelFactory(application))
+        name  = intent.getStringExtra("name").toString()
+
+        viewModel = ViewModelProvider(this, MainViewModelFactory(application,name))
                     .get(MainViewModel::class.java)
         adapter = QuotesAdapter(viewModel.quoteList, this)
 
@@ -42,6 +45,7 @@ class ListActivity : AppCompatActivity() , QuotesAdapter.OnItemClickListener {
         Log.d(TAG, "onItemClick: $position ")
         Intent(this,MainActivity::class.java).apply {
             putExtra("position",position)
+            putExtra("name",name)
             startActivity(this)
         }
     }

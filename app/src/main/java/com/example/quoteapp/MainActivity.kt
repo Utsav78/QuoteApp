@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 
 class MainActivity : AppCompatActivity() {
     private  val TAG = "MainActivity"
-    lateinit var mainViewModel: MainViewModel
+    private lateinit var mainViewModel: MainViewModel
 
     private val quoteText: TextView
         get() = findViewById(R.id.quoteText)
@@ -18,20 +18,22 @@ class MainActivity : AppCompatActivity() {
     private val quoteAuthor: TextView
         get() = findViewById(R.id.quoteAuthor)
 
+    private lateinit var name : String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mainViewModel = ViewModelProvider(this, MainViewModelFactory(application))
-                        .get(MainViewModel::class.java)
-        setQuote(mainViewModel.getQuote())
+        val position = intent.getIntExtra("position",0)
+        name = intent.getStringExtra("name").toString()
+        Log.d(TAG, "onCreate: $position")
 
-        if (intent != null) {
-            val position = intent.getIntExtra("position",0)
-            Log.d(TAG, "onCreate: $position")
-            val quote: Quote = mainViewModel.quoteList[position]
-            setQuote(quote)
-        }
+
+        mainViewModel = ViewModelProvider(this, MainViewModelFactory(application,name))
+                        .get(MainViewModel::class.java)
+        val quote: Quote = mainViewModel.quoteList[position]
+        setQuote(quote)
+
 
 
 
@@ -62,11 +64,6 @@ class MainActivity : AppCompatActivity() {
 
     fun onRandom(view: View) {
         setQuote(mainViewModel.randomQuote())
-    }
-
-    fun showInRecyclerView(view: View) {
-        val intent = Intent(this,ListActivity::class.java)
-        startActivity(intent)
     }
 
 }
