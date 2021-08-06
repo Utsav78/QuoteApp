@@ -10,13 +10,15 @@
     android:paddingBottom="0dp"
     tools:context=".MainActivity">
 
+
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/montserrat_semibold"
-        android:text="QUOTIFY"
+        android:text="@string/app_name"
         android:textAlignment="center"
         android:textColor="#FFF"
         android:textSize="28sp"
@@ -54,7 +56,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_semibold"
             android:paddingStart="10dp"
-            android:text="Genius is one percent inspiration and ninety-nine percent perspiration."
+            android:paddingEnd="5dp"
+            android:text="@string/sample_quote"
             android:textColor="#454545"
             android:textSize="24sp" />
 
@@ -65,7 +68,8 @@
             android:layout_marginTop="16dp"
             android:fontFamily="@font/montserrat_medium"
             android:paddingStart="10dp"
-            android:text="Bruce Wayne"
+            android:paddingEnd="10dp"
+            android:text="@string/sample_author"
             android:textColor="#454545"
             android:textSize="20sp" />
 
@@ -83,52 +87,57 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginEnd="15dp"
             android:layout_weight="1"
-            android:drawableStart="@drawable/ic_left_arrow"
-            android:text="PREVIOUS"
+            android:gravity="center"
             android:onClick="onPrevious"
-            android:textColor="#80FFFFFF"
+            android:text="@string/previous"
+            android:textColor="#FCE4EC"
             android:textSize="18sp"
+            app:drawableStartCompat="@drawable/ic_left_arrow"
             app:drawableTint="#80FFFFFF" />
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginEnd="15dp"
             android:layout_weight="1"
-            android:text="RANDOM"
+            android:gravity="center"
             android:onClick="onRandom"
-            android:textColor="#80FFFFFF"
+            android:text="@string/random"
+            android:textColor="#FCE4EC"
             android:textSize="18sp"
             app:drawableTint="#80FFFFFF" />
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_weight="1"
-            android:text="NEXT"
+            android:gravity="center"
             android:onClick="onNext"
-            android:textAlignment="textEnd"
-            android:textColor="#80FFFFFF"
+            android:text="@string/next"
+            android:textColor="#FCE4EC"
             android:textSize="18sp"
-            app:drawableTint="#80FFFFFF"
-            app:drawableEndCompat="@drawable/ic_arrow" />
+            app:drawableEndCompat="@drawable/ic_arrow"
+            app:drawableTint="#80FFFFFF" />
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
         android:layout_marginEnd="24dp"
-        app:backgroundTint="#454545"
-        android:onClick="onShare"
+        android:clickable="true"
+        android:focusable="true"
         android:foregroundTint="#FFF"
+        android:onClick="onShare"
+        app:backgroundTint="#454545"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:srcCompat="@drawable/ic_share"
-        android:focusable="true" />
+        tools:ignore="SpeakableTextPresentCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

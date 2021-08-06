@@ -5,5 +5,17 @@
     <string name="happy_life">Happy Life</string>
     <string name="shuffle">Shuffle</string>
     <string name="great_stories">Great Stories</string>
+    <string name="previous">PREVIOUS</string>
+    <string name="random">RANDOM</string>
+    <string name="next">NEXT</string>
+    <string name="sample_quote">Genius is one percent inspiration and ninety-nine percent perspiration.</string>
+    <string name="sample_author">Bruce Wayne</string>
+    <string name="truth">Truth</string>
+    <string name="hopes">Hopes</string>
+    <string name="happiness">Happiness</string>
+    <string name="love">Love</string>
+    <string name="wisdom">Wisdom</string>
+    <string name="goals">Goals</string>
+    <string name="inspiration">Inspiration</string>
 
 </resources>

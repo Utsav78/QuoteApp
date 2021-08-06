@@ -28,15 +28,10 @@ class MainActivity : AppCompatActivity() {
         name = intent.getStringExtra("name").toString()
         Log.d(TAG, "onCreate: $position")
 
-
         mainViewModel = ViewModelProvider(this, MainViewModelFactory(application,name))
                         .get(MainViewModel::class.java)
         val quote: Quote = mainViewModel.quoteList[position]
         setQuote(quote)
-
-
-
-
 
     }
 

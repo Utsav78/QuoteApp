@@ -34,11 +34,6 @@ class ListActivity : AppCompatActivity() , QuotesAdapter.OnItemClickListener {
         recyclerView.setHasFixedSize(true)
         recyclerView.adapter = adapter
 
-
-
-
-
-
     }
 
     override fun onItemClick(position: Int) {
