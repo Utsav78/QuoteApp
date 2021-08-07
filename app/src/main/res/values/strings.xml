@@ -17,5 +17,6 @@
     <string name="wisdom">Wisdom</string>
     <string name="goals">Goals</string>
     <string name="inspiration">Inspiration</string>
+    <string name="heading"><u>Quotes Of The Day</u></string>
 
 </resources>

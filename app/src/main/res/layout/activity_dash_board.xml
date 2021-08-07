@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_gradient"
+    android:background="@color/app_color"
     tools:context=".DashBoardActivity">
 
     <LinearLayout
@@ -30,9 +30,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Quotes Of The Day"
+                android:text="@string/heading"
                 android:textStyle="bold"
                 android:layout_gravity="center_horizontal"
+                android:padding="8dp"
+                android:fontFamily="@font/viga"
                 android:textSize="24sp"
                 android:textColor="@color/app_color"
                 android:layout_marginBottom="12dp"/>
@@ -96,6 +98,7 @@
                     android:gravity="center"
                     android:padding="16dp"
                     android:orientation="vertical"
+                    android:background="@color/white"
                     android:onClick="onInspiration"
                     tools:ignore="UseCompoundDrawables">
 
@@ -106,13 +109,16 @@
                         android:src="@drawable/inspiration"
 
                         />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/viga"
+                        android:text="@string/inspiration"
+                        android:textColor="@color/black"
                         android:textSize="18sp"
-                        android:text="@string/inspiration"/>
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -133,6 +139,7 @@
                     android:gravity="center"
                     android:padding="16dp"
                     android:orientation="vertical"
+                    android:background="@color/white"
                     android:onClick="onRelationship"
                     tools:ignore="UseCompoundDrawables">
 
@@ -141,13 +148,16 @@
                         android:layout_height="80dp"
                         android:src="@drawable/relationship"
                         />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
+                        android:fontFamily="@font/viga"
+                        android:text="@string/relationship"
+                        android:textColor="@color/black"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:text="@string/relationship"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
 
 
@@ -173,6 +183,7 @@
                     android:gravity="center"
                     android:padding="16dp"
                     android:orientation="vertical"
+                    android:background="@color/white"
                     android:onClick="onTruth"
                     tools:ignore="UseCompoundDrawables">
 
@@ -181,13 +192,16 @@
                         android:layout_height="80dp"
                         android:src="@drawable/truth"
                         />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/viga"
+                        android:text="@string/truth"
+                        android:textColor="@color/black"
                         android:textSize="18sp"
-                        android:text="@string/truth"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
 
 
@@ -213,6 +227,7 @@
                     android:padding="16dp"
                     android:orientation="vertical"
                     android:onClick="onPhilosophy"
+                    android:background="@color/white"
                     tools:ignore="UseCompoundDrawables">
 
                     <ImageView
@@ -220,13 +235,16 @@
                         android:layout_height="80dp"
                         android:src="@drawable/philosophy"
                         />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
                         android:layout_marginTop="12dp"
+                        android:fontFamily="@font/viga"
+                        android:text="Philosophy"
+                        android:textColor="@color/black"
                         android:textSize="18sp"
-                        android:text="Philosophy"/>
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -253,6 +271,7 @@
                     android:gravity="center"
                     android:padding="16dp"
                     android:orientation="vertical"
+                    android:background="@color/white"
                     android:onClick="onHappiness"
                     tools:ignore="UseCompoundDrawables">
 
@@ -261,13 +280,16 @@
                         android:layout_height="80dp"
                         android:src="@drawable/happy"
                         />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
+                        android:fontFamily="@font/viga"
+                        android:text="@string/happiness"
+                        android:textColor="@color/black"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:text="@string/happiness"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
 
 
@@ -290,6 +312,7 @@
                     android:gravity="center"
                     android:padding="16dp"
                     android:onClick="onHope"
+                    android:background="@color/white"
                     android:orientation="vertical"
                     tools:ignore="UseCompoundDrawables">
 
@@ -298,13 +321,16 @@
                         android:layout_height="80dp"
                         android:src="@drawable/hopes"
                         />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/viga"
+                        android:text="@string/hopes"
+                        android:textColor="@color/black"
                         android:textSize="18sp"
-                        android:text="@string/hopes"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -325,6 +351,7 @@
                     android:gravity="center"
                     android:padding="16dp"
                     android:onClick="onLove"
+                    android:background="@color/white"
                     android:orientation="vertical"
                     tools:ignore="UseCompoundDrawables">
 
@@ -333,13 +360,16 @@
                         android:layout_height="80dp"
                         android:src="@drawable/love"
                         />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/viga"
+                        android:text="@string/love"
+                        android:textColor="@color/black"
                         android:textSize="18sp"
-                        android:text="@string/love"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -357,6 +387,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
+                    android:background="@color/white"
                     android:padding="16dp"
                     android:onClick="onWisdom"
                     android:orientation="vertical"
@@ -367,13 +398,16 @@
                         android:layout_height="80dp"
                         android:src="@drawable/wisdom"
                         />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/viga"
+                        android:text="@string/wisdom"
+                        android:textColor="@color/black"
                         android:textSize="18sp"
-                        android:text="@string/wisdom"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -393,6 +427,7 @@
                     android:gravity="center"
                     android:padding="16dp"
                     android:onClick="onGoals"
+                    android:background="@color/white"
                     android:orientation="vertical"
                     tools:ignore="UseCompoundDrawables">
 
@@ -401,13 +436,16 @@
                         android:layout_height="80dp"
                         android:src="@drawable/goals"
                         />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/viga"
+                        android:text="@string/goals"
+                        android:textColor="@color/black"
                         android:textSize="18sp"
-                        android:text="@string/goals"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
