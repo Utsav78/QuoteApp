@@ -10,15 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuoteApp">
         <activity
-            android:name=".DashBoardActivity"
+            android:name="com.codewithutsav.quoteapp.DashBoardActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.codewithutsav.quoteapp.MainActivity"
             android:exported="true" />
         <activity
-            android:name=".ListActivity"
+            android:name="com.codewithutsav.quoteapp.ListActivity"
             android:exported="true" />
-        <activity android:name=".SplashActivity">
+        <activity android:name="com.codewithutsav.quoteapp.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">QuoteApp</string>
+    <string name="app_name">Quotew</string>
     <string name="hope">Hope</string>
     <string name="relationship">Relationship</string>
     <string name="happy_life">Happy Life</string>
@@ -17,6 +17,8 @@
     <string name="wisdom">Wisdom</string>
     <string name="goals">Goals</string>
     <string name="inspiration">Inspiration</string>
-    <string name="heading"><u>Quotes Of The Day</u></string>
+    <string name="heading"><u>Quote Of The Day</u></string>
+    <string name="philosophy">Philosophy</string>
+    <string name="random_text">Everything is Possible</string>
 
 </resources>

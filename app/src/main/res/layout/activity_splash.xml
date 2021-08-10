@@ -5,16 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".SplashActivity">
+    tools:context="com.codewithutsav.quoteapp.SplashActivity">
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="204dp"
         android:layout_height="209dp"
-        android:elevation="200dp"
+        android:elevation="500dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/app_logo_hawa" />
+        app:srcCompat="@drawable/app_logo_circle" />
 </androidx.constraintlayout.widget.ConstraintLayout>
