@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -23,7 +24,11 @@ class ListActivity : AppCompatActivity() , QuotesAdapter.OnItemClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
 
+        val toolbar : Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+
         name  = intent.getStringExtra("name").toString()
+        title = name.uppercase().replaceAfterLast(".","")
 
         viewModel = ViewModelProvider(this, MainViewModelFactory(application,name))
                     .get(MainViewModel::class.java)
