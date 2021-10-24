@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import com.example.quoteapp.R
+import kotlin.text.Typography.quote
 
 class MainActivity : AppCompatActivity() {
     private lateinit var mainViewModel: MainViewModel
@@ -29,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         mainViewModel = ViewModelProvider(this, MainViewModelFactory(application,name))
                         .get(MainViewModel::class.java)
-        val quote: Quote = mainViewModel.quoteList[position]
+        var quote : Quote = mainViewModel.quoteList[position]
         setQuote(quote)
 
     }
@@ -52,7 +53,7 @@ class MainActivity : AppCompatActivity() {
     fun onShare(view: View) {
         val intent = Intent(Intent.ACTION_SEND)
         intent.type = "text/plain"
-        intent.putExtra(Intent.EXTRA_TEXT, mainViewModel.getQuote().text)
+        intent.putExtra(Intent.EXTRA_TEXT, quoteText.text)
         startActivity(intent)
     }
 

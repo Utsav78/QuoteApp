@@ -16,6 +16,7 @@ class ListActivity : AppCompatActivity() , QuotesAdapter.OnItemClickListener {
     private lateinit var adapter: QuotesAdapter
     private lateinit var viewModel: MainViewModel
     private lateinit var name : String
+
     companion object {
         private const val TAG = "ListActivity"
     }
